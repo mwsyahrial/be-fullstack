@@ -19,7 +19,7 @@ db.mongoose
   });
 
 var corsOptions = {
-  origin: ("https://fe-fullstack.herokuapp.com/api")
+  origin: ("https://fe-fullstack.herokuapp.com")
 };
 
 app.use(cors(corsOptions));
