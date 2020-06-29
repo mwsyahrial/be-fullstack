@@ -6,7 +6,7 @@ const app = express();
 
 const db = require("./app/models");
 db.mongoose
-  .connect(db.url, {
+  .connect(process.env.MONGODB_URI || db.url, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
@@ -19,7 +19,7 @@ db.mongoose
   });
 
 var corsOptions = {
-  origin: ("http://localhost:8081" || process.env.MONGODB_URI)
+  origin: ("http://localhost:8081" || "http://be-fullstack.herokuapp.com")
 };
 
 app.use(cors(corsOptions));
