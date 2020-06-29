@@ -19,7 +19,7 @@ db.mongoose
   });
 
 var corsOptions = {
-  origin: ("http://localhost:8081" || "http://be-fullstack.herokuapp.com")
+  origin: ("http://be-fullstack.herokuapp.com")
 };
 
 app.use(cors(corsOptions));
